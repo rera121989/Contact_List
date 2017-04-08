@@ -5,10 +5,10 @@ var app = express();
 
 //root is demonstrated by '/' symbol
 // returns diff things for differnt pages
-/*app.get("/", function (req, res){
-	res.send("Hello Raymond");
-});
-*/
+	/*app.get("/", function (req, res){
+		res.send("Hello Raymond");
+	});
+	*/
 
 app.use(express.static(__dirname + "/public"));
 
