@@ -32,20 +32,20 @@
 			</tr>
 		</thead>
 		<tbody>
-			<tr>
-				<td>Raymond</td>
-				<td>raymond@yahoo.com</td>
-				<td>323.123.4567</td>
+			<tr ng-repeat = "contact in contactList">
+				<td>{{contact.name}}</td>
+				<td>{{contact.email}}</td>
+				<td>{{contact.number}}</td>
 			</tr>
 			<tr>
 				<td>Eduardo</td>
 				<td>eduardo@gmail.com</td>
-				<td>323.987.6543</td>
+				<td>(323) 987-6543</td>
 			</tr>
 			<tr>
 				<td>Aguilar</td>
 				<td>aguilar@live.com</td>
-				<td>323.232.3232</td>
+				<td>(323) 232-3232</td>
 			</tr>
 
 		</tbody>
