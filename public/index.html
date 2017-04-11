@@ -1,6 +1,6 @@
 <!Doctype>
 <!DOCTYPE html>
-<html>
+<html ng-app = "myApp">
 <head>
 	<title>Contact List</title>
 
@@ -12,14 +12,17 @@
 </head>
 <body>
 
+<div class="container" ng-controller = "AppCtrl">
+
 	<div class="jumbotron">
-		<div class="container">
 		<h1>Contact List App</h1>
 		<h4>by Raymond Romero</h4>
-		</div>
-	</div>
 
-	<div class="container">
+		<!-- two way binding type and document.write on form-->
+		<input ng-model = "test" >
+		<!-- double bracket {{}} sends request to look for that variable globally -->
+		{{test}}</input>
+	</div>
 	<table class="table">
 		<thead>
 			<tr>
@@ -47,7 +50,8 @@
 
 		</tbody>
 	</table>
-	</div>
-
+	<!-- added instead of downloading angular -->
+	<script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
+	<script src = "controllers/controller.js"></script>
 </body>
-</html>
+</html></div>
