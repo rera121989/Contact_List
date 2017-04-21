@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html ng-app = "myApp">
 <head>
-	<title>Contact List</title>
+	<title>To Do List</title>
 	<link rel="icon" href="icons/contacts.ico"/>
 
 	<!-- Latest compiled and minified CSS -->
@@ -18,19 +18,15 @@
 	<div class="jumbotron">
 		<h1>To Do List App</h1>
 		<h4>by Raymundo Romero</h4>
-
-		<!-- two way binding type and document.write on form-->
-		<input ng-model = "test" >
-		<!-- double bracket {{}} sends request to look for that variable globally -->
-		{{test}}</input>
 	</div>
+
 	<table class="table">
 		<thead>
 			<tr>
-				<th>Name</th>
-				<th>Email</th>
-				<th>Phone</th>
-				<th>Accion</th>			
+				<th>Title</th>
+				<th>Note</th>
+				<th>Due Date</th>
+				<th>Action</th>			
 			</tr>
 		</thead>
 		<tbody>
@@ -39,12 +35,12 @@
 			<td><input class="form-control" ng-model = "contact.name"></td>
 			<td><input class="form-control" ng-model = "contact.email"></td>
 			<td><input class="form-control" ng-model = "contact.number"></td>
-			<td><button class="btn btn-primary" ng-click = "addContact()">Add Contact</button></td>
+			<td><button class="btn btn-primary" ng-click = "addContact()">Add Task</button></td>
 			<td><button class="btn btn-info" ng-click = "update()">Update</button>&nbsp;&nbsp;<button class="btn btn-info" ng-click="deselect()">Clear</button></td>
 		</tr>
 
 		<tr ng-repeat = "contact in contactList">
-				<td>{{contact.name}}</td>
+				<td><li>{{contact.name}}</li></td>
 				<td>{{contact.email}}</td>
 				<td>{{contact.number}}</td>
 				<td><button class="btn btn-danger" ng-click = "remove(contact._id)">Delete</button></td>
