@@ -20,29 +20,40 @@
 		<h4>by Raymundo Romero</h4>
 	</div>
 
+
+	<table class="table">
+		<tbody>
+
+		<tr style="background-color:   #f6f0bb;">
+			<td><input placeholder="Title" class="form-control" ng-model = "contact.name">&nbsp;&nbsp;<textarea placeholder="Note" class="form-control" rows = "4" ng-model = "contact.email"></textarea></td>
+			<td>
+				Due Date
+				<input class="form-control" ng-model = "contact.number" placeholder="mm/dd/yr">
+				<button class="btn btn-primary" ng-click = "addContact()">Add Task</button><button class="btn btn-info" ng-click = "update()">Update</button>
+				<button class="btn btn-info" ng-click="deselect()">Clear</button>
+				</td>
+				
+		</tr>
+		</tbody>
+	</table>
+
+
 	<table class="table">
 		<thead>
 			<tr>
 				<th>Title</th>
 				<th>Note</th>
 				<th>Due Date</th>
+				<th>Status</th>
 				<th>Action</th>			
 			</tr>
 		</thead>
 		<tbody>
-
-		<tr>
-			<td><input class="form-control" ng-model = "contact.name"></td>
-			<td><input class="form-control" ng-model = "contact.email"></td>
-			<td><input class="form-control" ng-model = "contact.number"></td>
-			<td><button class="btn btn-primary" ng-click = "addContact()">Add Task</button></td>
-			<td><button class="btn btn-info" ng-click = "update()">Update</button>&nbsp;&nbsp;<button class="btn btn-info" ng-click="deselect()">Clear</button></td>
-		</tr>
-
 		<tr ng-repeat = "contact in contactList">
 				<td><li>{{contact.name}}</li></td>
 				<td>{{contact.email}}</td>
 				<td>{{contact.number}}</td>
+				<td>{{contact.status}}</td>
 				<td><button class="btn btn-danger" ng-click = "remove(contact._id)">Delete</button></td>
 				<td><button class="btn btn-warning" ng-click = "edit(contact._id)">Edit</button></td>
 			</tr>
